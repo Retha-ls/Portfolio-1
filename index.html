@@ -1246,26 +1246,43 @@
 
   // Form validation
   const contactForm = document.querySelector('form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      const inputs = this.querySelectorAll('input, textarea');
-      let isValid = true;
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    // Clear any previous error states
+    const inputs = this.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach(input => {
+      input.style.borderColor = '#a259ff'; // Reset to default
+    });
+    
+    let isValid = true;
+    
+    // Only check required fields that are visible and not hidden
+    inputs.forEach(input => {
+      if (input.type === 'hidden') return;
       
-      inputs.forEach(input => {
-        if (!input.value.trim() && input.type !== 'hidden') {
-          input.style.borderColor = '#ff4757';
-          isValid = false;
-        } else if (input.type !== 'hidden') {
-          input.style.borderColor = '#a259ff';
-        }
-      });
-      
-      if (!isValid) {
-        e.preventDefault();
-        alert('Please fill all required fields');
+      if (!input.value || (typeof input.value === 'string' && !input.value.trim())) {
+        input.style.borderColor = '#ff4757';
+        isValid = false;
       }
     });
-  }
+    
+    if (!isValid) {
+      e.preventDefault();
+      alert('Please fill all required fields');
+      return false;
+    }
+    
+    // If valid, allow form submission
+    return true;
+  });
+  contactForm.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('input', function() {
+      if (this.style.borderColor === 'rgb(255, 71, 87)') { // If currently in error state
+        this.style.borderColor = '#a259ff'; // Reset to normal
+      }
+    });
+  });
+}
 
   // Modal functionality
   const viewMoreBtns = document.querySelectorAll('.view-more-btn');
