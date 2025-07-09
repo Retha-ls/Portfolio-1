@@ -880,26 +880,26 @@
     <div class="skills-group" data-aos="flip-left" data-aos-delay="0">
       <h3 class="skills-group-title">Frontend</h3>
       <div class="skills-container">
-        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-        <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
-        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-        <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</div>
+        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</div>
+        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</div>
+        <div class="skill-item"><i class="fab fa-react"></i><span>React</div>
+        <div class="skill-item"><i class="fab fa-python"></i><span>Python</div>
+        <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</div>
       </div>
     </div>
     <div class="skills-group" data-aos="flip-up" data-aos-delay="100">
       <h3 class="skills-group-title">Backend</h3>
       <div class="skills-container">
-        <div class="skill-item"><i class="fab fa-php"></i><span>PHP</span></div>
-        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
-        <div class="skill-item"><i class="fab fa-cuttlefish"></i><span>C++</span></div>
+        <div class="skill-item"><i class="fab fa-php"></i><span>PHP</div>
+        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</div>
+        <div class="skill-item"><i class="fab fa-cuttlefish"></i><span>C++</div>
       </div>
     </div>
     <div class="skills-group" data-aos="flip-right" data-aos-delay="200">
       <h3 class="skills-group-title">Design Tools</h3>
       <div class="skills-container">
-        <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+        <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</div>
       </div>
     </div>
   </div>
@@ -923,7 +923,7 @@
         MobiPay lets users send, receive, and store money securely. Features include instant transfers, transaction history, bill payments, and a user-friendly dashboard. It prioritizes ease of use for seamless digital payments.
       </div>
       <div style="margin-top: 0.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.35em; width: 100%;">
-        <button class="view-more-btn stylish-btn" data-modal="modal-taskit">View More</button>
+         <button class="view-more-btn stylish-btn" data-modal="modal-mobipay">View More</button>
       </div>
       <div class="project-progress-bar">
         <div class="project-progress progress-mobipay"></div>
@@ -946,7 +946,7 @@
         Budget Bridge helps users track income and expenses, set financial goals, and analyze spending patterns through interactive charts and friendly monthly budget dashboards for better money management.
       </div>
       <div style="margin-top: 0.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.35em; width: 100%;">
-        <button class="view-more-btn stylish-btn" data-modal="modal-taskit">View More</button>
+        <button class="view-more-btn stylish-btn" data-modal="modal-budgetbridge">View More</button>
       </div>
       <div class="project-progress-bar">
         <div class="project-progress progress-budgetbridge"></div>
@@ -968,7 +968,7 @@
         TaskIT organizes tasks with priority levels, due dates, and progress tracking through a clean interface featuring calendar integration and productivity analytics for efficient workflow.<br><br>
       </div>
       <div style="margin-top: 0.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.35em; width: 100%;">
-        <button class="view-more-btn stylish-btn" data-modal="modal-taskit">View More</button>
+        <button class="view-more-btn stylish-btn" data-modal="modal-taskit">View more</button>
       </div>
       <div class="project-progress-bar">
         <div class="project-progress progress-taskit"></div>
@@ -983,15 +983,32 @@
   <div class="modal-content">
     <span class="close-modal">&times;</span>
     <h2>MobiPay Project</h2>
+    <div style="display:flex; gap:0.7em; justify-content:center; margin-bottom:0.7em; flex-wrap:wrap;">
+      <button class="stylish-btn" onclick="window.open('https://mobipayls.netlify.app/', '_blank')" style="background:linear-gradient(90deg,#a259ff 60%,#6c1bb7 100%); color:#fff; font-weight:600; font-size:1.08em; border:none; border-radius:0.7em; padding:0.7em 1.7em; box-shadow:0 2px 10px #a259ff33; cursor:pointer; display:flex; align-items:center; gap:0.6em;"><i class='fas fa-globe'></i> Live Site</button>
+      <button class="stylish-btn" onclick="window.open('https://github.com/Retha-ls/Mobipay', '_blank')" style="background:linear-gradient(90deg,#23272e 60%,#6c1bb7 100%); color:#fff; font-weight:600; font-size:1.08em; border:none; border-radius:0.7em; padding:0.7em 1.7em; box-shadow:0 2px 10px #a259ff33; cursor:pointer; display:flex; align-items:center; gap:0.6em;"><i class='fab fa-github'></i> Github Repo</button>
+    </div>
     <img src="mobipay.png" alt="MobiPay" style="max-width:100%; border-radius:8px; margin:10px 0;">
-    <p><strong>Description:</strong> A digital wallet application with secure transactions.</p>
+    <p><strong>Description:</strong>MobiPay is a secure digital wallet application I developed to facilitate money transfers between users with features similar to popular payment platforms like PayPal or Venmo.</p>
     <p><strong>Technologies:</strong> PHP, MySQL, JavaScript</p>
     <p><strong>Features:</strong></p>
     <ul>
       <li>User authentication</li>
       <li>Money transfers</li>
       <li>Transaction history</li>
+      <li>Balance Management</li>
+      <li>Bill Payments</li>
     </ul>
+    <h2>Challenges</h2>
+    <P>Security Concerns:</P>
+        <ul>
+          <li>Implemented proper password hashing with PHP's password_hash()</li>
+          <li>Added input validation to prevent SQL injection</li>
+        </ul>
+    <P>Transaction Processing:</P>
+        <ul>
+          <li>Developed atomic database operations to ensure data consistency</li>
+        </ul>
+  
   </div>
 </div>
 
@@ -999,6 +1016,10 @@
   <div class="modal-content">
     <span class="close-modal">&times;</span>
     <h2>Budget Bridge Project</h2>
+    <div style="display:flex; gap:0.7em; justify-content:center; margin-bottom:0.7em; flex-wrap:wrap;">
+      <button class="stylish-btn" onclick="window.open('https://rethabilematela.netlify.app/', '_blank')" style="background:linear-gradient(90deg,#a259ff 60%,#6c1bb7 100%); color:#fff; font-weight:600; font-size:1.08em; border:none; border-radius:0.7em; padding:0.7em 1.7em; box-shadow:0 2px 10px #a259ff33; cursor:pointer; display:flex; align-items:center; gap:0.6em;"><i class='fas fa-globe'></i> Live Site</button>
+      <button class="stylish-btn" onclick="window.open('https://rethabilematela.netlify.app', '_blank')" style="background:linear-gradient(90deg,#23272e 60%,#6c1bb7 100%); color:#fff; font-weight:600; font-size:1.08em; border:none; border-radius:0.7em; padding:0.7em 1.7em; box-shadow:0 2px 10px #a259ff33; cursor:pointer; display:flex; align-items:center; gap:0.6em;"><i class='fab fa-github'></i> Github Repo</button>
+    </div>
     <img src="Budgetbridge.png" alt="Budget Bridge" style="max-width:100%; border-radius:8px; margin:10px 0;">
     <p><strong>Description:</strong> A personal finance management application.</p>
     <p><strong>Technologies:</strong> PHP, MySQL, JavaScript</p>
@@ -1015,8 +1036,12 @@
   <div class="modal-content">
     <span class="close-modal">&times;</span>
     <h2>TaskIt Project</h2>
+    <div style="display:flex; gap:0.7em; justify-content:center; margin-bottom:0.7em; flex-wrap:wrap;">
+      <button class="stylish-btn" onclick="window.open('the website')" style="background:linear-gradient(90deg,#a259ff 60%,#6c1bb7 100%); color:#fff; font-weight:600; font-size:1.08em; border:none; border-radius:0.7em; padding:0.7em 1.7em; box-shadow:0 2px 10px #a259ff33; cursor:pointer; display:flex; align-items:center; gap:0.6em;"><i class='fas fa-globe'></i> Live Site</button>
+      <button class="stylish-btn" onclick="window.open('https://github.com/Retha-ls/Taskit', '_blank')" style="background:linear-gradient(90deg,#23272e 60%,#6c1bb7 100%); color:#fff; font-weight:600; font-size:1.08em; border:none; border-radius:0.7em; padding:0.7em 1.7em; box-shadow:0 2px 10px #a259ff33; cursor:pointer; display:flex; align-items:center; gap:0.6em;"><i class='fab fa-github'></i> Github Repo</button>
+    </div>
     <img src="taskit.png" alt="TaskIt" style="max-width:100%; border-radius:8px; margin:10px 0;">
-    <p><strong>Description:</strong> A task management application (in progress).</p>
+    <p><strong>Description:</strong>    </p>
     <p><strong>Technologies:</strong> PHP, MySQL, JavaScript</p>
     <p><strong>Planned Features:</strong></p>
     <ul>
